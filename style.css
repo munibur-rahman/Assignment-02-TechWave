@@ -1,0 +1,81 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    line-height: 20px;
+    font-style: normal;
+}
+
+.gradient {
+    background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+}
+
+.text-graident {
+    background: linear-gradient(to top, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    /* for browser compatibility issue */
+    -webkit-background-clip: text;
+    /* give the background to fit in the text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* uses transparent because the text-white is hiding the background to make the background visible we used this */
+    color: transparent;
+
+}
+
+.nav-logo,
+.podcast-heading {
+    font-size: clamp(32px, calc(22.737px + 2.105vw), 48px);
+}
+
+.subscribe-btn,
+.spotify-btn,
+.message-btn {
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.subscribe-btn:hover,
+.spotify-btn:hover,
+.message-btn:hover {
+    transform: scale(1.05);
+}
+
+/* hero section styles */
+.hero-section {
+    background: url('images/hero-bg.png');
+    background-position: 0 center;
+    background-repeat: repeat-x;
+    padding: clamp(40px, calc(5.263px + 7.895vw), 100px) 0;
+    animation: slideHeroBackground 15s linear infinite;
+}
+
+@keyframes slideHeroBackground {
+    0% {
+        background-position: 0 center;
+    }
+
+    100% {
+        background-position: 1920px center;
+    }
+}
+
+.microphone {
+    background: url('images/hero-circle.png');
+    background-position: center;
+    background-size: contain;
+    /* margin-bottom: 40px; */
+}
+
+.hero-heading {
+    font-size: clamp(40px, calc(28.421px + 2.632vw), 60px);
+}
+
+/* main styles */
+
+/* about-podcast-container styles */
+.about-podcast-container {
+    padding-bottom: clamp(40px, calc(0px + 10vw), 120px);
+}
+.about-podcast-container hr{
+    margin: clamp(40px, calc(20px + 5vw), 80px) auto;
+}
