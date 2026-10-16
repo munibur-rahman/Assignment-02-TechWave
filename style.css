@@ -23,7 +23,8 @@ body {
 }
 
 .nav-logo,
-.podcast-heading {
+.podcast-heading,
+.techwave-heading {
     font-size: clamp(32px, calc(22.737px + 2.105vw), 48px);
 }
 
@@ -76,6 +77,65 @@ body {
 .about-podcast-container {
     padding-bottom: clamp(40px, calc(0px + 10vw), 120px);
 }
-.about-podcast-container hr{
+
+.about-podcast-container hr {
     margin: clamp(40px, calc(20px + 5vw), 80px) auto;
+}
+
+/* why-techwave-container styles */
+.why-techwave-container {
+    padding-top: clamp(40px, calc(0px + 10vw), 120px);
+    padding-bottom: clamp(40px, calc(0px + 10vw), 120px);
+}
+
+/* naming the class to use grid-area */
+
+.audio-card {
+    grid-area: audio;
+}
+
+.mobile-card {
+    grid-area: mobile;
+}
+
+.global-card {
+    grid-area: global;
+}
+
+.interviews-card {
+    grid-area: interviews;
+}
+
+.resources-card {
+    grid-area: resources;
+}
+
+
+.techwave-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "audio mobile mobile"
+        "audio global global"
+        "interviews interviews resources"
+    ;
+}
+
+.techwave-card {
+    padding: clamp(24px, calc(14.737px + 2.105vw), 40px);
+}
+
+@media screen and (max-width:992px) {
+    .techwave-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "audio"
+            "mobile"
+            "global"
+            "interviews"
+            "resources"
+
+        ;
+    }
 }
