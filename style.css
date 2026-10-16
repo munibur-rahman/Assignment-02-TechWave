@@ -25,7 +25,8 @@ body {
 .nav-logo,
 .podcast-heading,
 .techwave-heading,
-.episode-heading {
+.episode-heading,
+.meet-host-heading {
     font-size: clamp(32px, calc(22.737px + 2.105vw), 48px);
 }
 
@@ -75,7 +76,8 @@ body {
 /* main styles */
 
 /* about-podcast-container styles */
-.about-podcast-container {
+.about-podcast-container,
+.meet-host {
     padding-bottom: clamp(40px, calc(0px + 10vw), 120px);
 }
 
