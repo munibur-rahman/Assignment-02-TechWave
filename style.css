@@ -10,7 +10,7 @@ body {
     background: linear-gradient(to top right, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
 }
 
-.text-graident {
+.text-gradient {
     background: linear-gradient(to top, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     /* for browser compatibility issue */
     -webkit-background-clip: text;
@@ -130,6 +130,22 @@ body {
     padding: clamp(24px, calc(14.737px + 2.105vw), 40px);
 }
 
+footer{
+    background: url('images/footer-bg.png');
+    background-position: 0 center;
+    padding: clamp(40px, calc(-6.316px + 10.526vw), 120px) 0;
+    background-repeat: repeat-x;
+    animation: FooterWaveAnimation 15s linear infinite;
+}
+@keyframes FooterWaveAnimation {
+    0%{
+        background-position: 0 center ;
+    }
+    100%{
+        background-position: 1920px center ;
+    }
+    
+}
 @media screen and (max-width:992px) {
     .techwave-grid {
         grid-template-columns: 1fr;
